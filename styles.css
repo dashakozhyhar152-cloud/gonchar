@@ -1,0 +1,525 @@
+/* 1. Задаємо наші кольори з картинки-палітри */
+:root {
+    --dark-green: #0A3323;     /* Dark green - Основний темний */
+    --moss-green: #839958;     /* Moss green - Моховий зелений */
+    --beige: #F7F4D5;          /* Beige - Бежевий фон */
+    --rosy-brown: #D3968C;     /* Rosy brown - Рожево-коричневий для кнопок */
+    --midnight-green: #105666; /* Midnight green - Акцентний */
+}
+
+/* 2. Загальні скидання та фон сторінки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+body {
+    background-color: var(--beige);
+    color: var(--dark-green);
+}
+
+/* 3. Стилі шапки (Header) */
+.site-header {
+    background-color: var(--dark-green);
+    color: var(--beige);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--beige);
+}
+
+.tagline {
+    font-size: 12px;
+    color: var(--rosy-brown);
+}
+
+/* Стилі для меню */
+.main-nav a {
+    color: var(--beige);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--rosy-brown);
+}
+
+/* Кнопка "Записатися" у меню */
+.btn-nav {
+    background-color: var(--rosy-brown);
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background-color: var(--moss-green);
+}
+/* ==========================================
+   4. Стилі для Головного баннера (Hero)
+   ========================================== */
+.hero {
+    /* Фонове зображення з затишним процесом гончарства + темний оверлей для читабельності тексту */
+    background: linear-gradient(rgba(10, 51, 35, 0.75), rgba(16, 86, 102, 0.75)), 
+                url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--beige);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: var(--beige);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: var(--beige);
+    opacity: 0.95;
+}
+
+/* Кнопки на баннері */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: var(--moss-green);
+    color: var(--dark-green);
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--rosy-brown);
+    color: #ffffff;
+    transform: translateY(-2px); /* Легкий ефект підняття кнопки */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--beige);
+    border: 2px solid var(--beige);
+    padding: 12px 26px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--beige);
+    color: var(--dark-green);
+    transform: translateY(-2px);
+}
+/* ==========================================
+   5. Стилі для Каталогу (Catalog & Cards)
+   ========================================== */
+.catalog-section {
+    padding: 70px 20px;
+    background-color: var(--beige);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: var(--midnight-green);
+    margin-bottom: 50px;
+}
+
+.category-block {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 24px;
+    color: var(--dark-green);
+    border-bottom: 2px solid var(--moss-green);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+}
+
+/* Сітка для карток (Grid layout) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Стилі індивідуальної картки */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(10, 51, 35, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(10, 51, 35, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h4 {
+    font-size: 20px;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--midnight-green);
+    margin-bottom: 15px;
+}
+
+.btn-card {
+    background-color: var(--moss-green);
+    color: var(--dark-green);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--rosy-brown);
+    color: #ffffff;
+}
+/* ==========================================
+   6. Стилі для "Про нас", "Доставка", "Контакти"
+   ========================================== */
+
+/* Про нас */
+.about-section {
+    padding: 70px 20px;
+    background-color: var(--midnight-green);
+    color: var(--beige);
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--beige);
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.mascot-box {
+    background-color: rgba(247, 244, 213, 0.1);
+    border-left: 4px solid var(--rosy-brown);
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mascot-icon {
+    font-size: 30px;
+}
+
+.mascot-box h4 {
+    color: var(--rosy-brown);
+    margin-bottom: 5px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Доставка й оплата */
+.delivery-section {
+    padding: 70px 20px;
+    background-color: var(--beige);
+}
+
+.delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.delivery-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--moss-green);
+    box-shadow: 0 4px 10px rgba(10,51,35,0.05);
+}
+
+.delivery-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.delivery-card h3 {
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+.delivery-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Контакти */
+.contacts-section {
+    padding: 70px 20px;
+    background-color: #ffffff;
+}
+
+.contacts-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contacts-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacts-info h2 {
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.contact-details li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 12px;
+    margin-top: 8px;
+    color: var(--dark-green);
+    background-color: var(--beige);
+    padding: 6px 14px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.socials a:hover {
+    background-color: var(--rosy-brown);
+    color: #ffffff;
+}
+
+.map-box {
+    flex: 1;
+    min-width: 300px;
+}
+/* Стилі для фотографії у контактах (замість карти) */
+.contacts-image-box {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacts-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(10, 51, 35, 0.1);
+}
+/* ==========================================
+   7. Стилі для форми замовлення та підвалу
+   ========================================== */
+
+.order-section {
+    padding: 70px 20px;
+    background-color: var(--midnight-green);
+    color: var(--beige);
+    text-align: center;
+}
+
+.order-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.order-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--beige);
+}
+
+.order-section p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: var(--beige);
+    opacity: 0.9;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(10, 51, 35, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--moss-green);
+}
+
+.order-form input, 
+.order-form select {
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid var(--moss-green);
+    background-color: #ffffff;
+    font-size: 16px;
+    color: var(--dark-green);
+}
+
+.btn-submit {
+    background-color: var(--rosy-brown);
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--moss-green);
+    color: var(--dark-green);
+}
+
+/* Підвал сайту */
+.site-footer {
+    background-color: var(--dark-green);
+    color: var(--beige);
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid rgba(131, 153, 88, 0.3);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.study-note {
+    font-style: italic;
+    color: var(--rosy-brown);
+    font-weight: bold;
+}

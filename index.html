@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <!-- Зробить сайт зручним для телефонів -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Poltava — Студія кераміки та фарфору</title>
+    <!-- Підключаємо файл зі стилями та кольорами -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Логотип та слоган -->
+            <div class="brand">
+                <span class="logo">Terra Poltava</span>
+                <span class="tagline">Створіть свій посуд у серці Полтави</span>
+            </div>
+            
+            <!-- Навігаційне меню -->
+            <nav class="main-nav">
+                <a href="#catalog">Каталог</a>
+                <a href="#about">Про нас</a>
+                <a href="#delivery">Доставка й оплата</a>
+                <a href="#contacts">Контакти</a>
+                <a href="#order" class="btn-nav">Записатися</a>
+            </nav>
+        </div>
+    </header>
+<section class="hero">
+        <div class="hero-content">
+            <h1>Магія кераміки та фарфору у твоїх руках</h1>
+            <p>Авторські курси та майстер-класи з виготовлення посуду ручної роботи в Полтаві. Відчуй тепло глини та створи свій перший шедевр.</p>
+            <div class="hero-buttons">
+                <a href="#catalog" class="btn-primary">Обрати курс</a>
+                <a href="#about" class="btn-secondary">Дізнатися більше</a>
+            </div>
+        </div>
+    </section>
+	<!-- Розділ "Каталог курсів" -->
+    <section id="catalog" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Каталог курсів та майстер-класів</h2>
+            <p class="section-subtitle">Оберіть свій напрямок: від першого дотику до глини до витонченого фарфору</p>
+
+            <!-- Категорія 1: Кераміка -->
+            <div class="category-block">
+                <h3 class="category-title">Кераміка та гончарство</h3>
+                <div class="cards-grid">
+                    
+                    <!-- Товар 1 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSic4gTlCy3k2qxK4MNduyu4Nd_BIzJ0EuSTnUKaQTNj1RdT_BJkMgJ7_I&s=10" alt="Основи гончарства">
+                        <div class="card-body">
+                            <h4>Основи гоnчарства</h4>
+                            <p>Перше знайомство з гончарним кругом. Навчитеся центрувати глину та формувати свої перші піали й чашки.</p>
+                            <span class="price">1 200 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                    <!-- Товар 2 -->
+                    <div class="card">
+                        <img src="https://etno-selo.com.ua/wp-content/uploads/DSC_8124-1920x1289.jpg" alt="Ручна ліпка посуду">
+                        <div class="card-body">
+                            <h4>Ручна ліпка посуду</h4>
+                            <p>Створення фактурних тарілок, блюдець та чаш без гончарного круга за допомогою ручних технік.</p>
+                            <span class="price">950 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                    <!-- Товар 3 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsMfHqKXqu0aSSSqoktw9RzjTyAEdMvM4ajTLIF5F9iA&s" alt="Керамічні вази та глечики">
+                        <div class="card-body">
+                            <h4>Вази та інтер'єрні глечики</h4>
+                            <p>Курс із виготовлення високих судин та інтер'єрного посуду складної форми з високотравматичним випалом.</p>
+                            <span class="price">2 100 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Категорія 2: Фарфор -->
+            <div class="category-block">
+                <h3 class="category-title">Фарфорове мистецтво</h3>
+                <div class="cards-grid">
+                    
+                    <!-- Товар 4 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-8MOdDOFzvmx7Y1hFXyxRLW-Ar13bxpStUbcnqHKf0w&s=10" alt="Витончений фарфор">
+                        <div class="card-body">
+                            <h4>Витончені фарфорові чашки</h4>
+                            <p>Навчання тонкостійкому фарфору. Створення легкого, майже прозорого чайного посуду.</p>
+                            <span class="price">1 800 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                    <!-- Товар 5 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg_msvdYdrTGNZNHZzfQIlU_pepSel1NSUquRhCLg7rw&s=10" alt="Розпис фарфору">
+                        <div class="card-body">
+                            <h4>Підглазурний розпис фарфору</h4>
+                            <p>Майстер-клас із декорування фарфорового посуду авторськими візерунками та ангобами.</p>
+                            <span class="price">1 400 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                    <!-- Товар 6 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfzqMBrHD2VgrsPq_vAdWLVRIc_ZFEjPMDDUQ5O-OnMQ&s=10" alt="Фарфоровий кавовий сет">
+                        <div class="card-body">
+                            <h4>Авторський кавовий сет</h4>
+                            <p>Повний курс зі створення кавового набору з фарфору: турка, чашечки та піднос.</p>
+                            <span class="price">3 500 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Категорія 3: Спеціальні майстер-класи -->
+            <div class="category-block">
+                <h3 class="category-title">Спеціальні події та інтенсиви</h3>
+                <div class="cards-grid">
+                    
+                    <!-- Товар 7 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO3ToBnJemvElqwHFcmPIFAVvoFi6rpYw1SPUyEuXv3g&s=10" alt="Побачення в майстерні">
+                        <div class="card-body">
+                            <h4>Гончарне побачення для двох</h4>
+                            <p>Романтичний вечір у майстерні за гончарним кругом. Створіть спільний посуд для дому.</p>
+                            <span class="price">2 400 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                    <!-- Товар 8 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzDwnfVaznJhS7XR0R2ZzM_fCGsh9KPJGOLPrOQ0GKOQ&s=10" alt="Майстер-клас Глазурування">
+                        <div class="card-body">
+                            <h4>Магія ефектних глазурей</h4>
+                            <p>Інтенсив із покриття посуду кольоровими та кристалічними глазурями й підготовка до випалу.</p>
+                            <span class="price">1 100 грн</span>
+                            <a href="#order" class="btn-card">Замовити</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+	<!-- 1. Розділ "Про нас" -->
+    <section id="about" class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>Про нашу майстерню в Полтаві</h2>
+                <p><strong>Terra Poltava</strong> — це творчий простір у затишному куточку Полтави, де кожен може відволіктися від міської метушні та доторкнутися до прадавнього ремесла.</p>
+                <p>Наша місія — дарувати натхнення, навчати традиційним техникам ліпки та допомагати створювати посуд, який наповнює дім теплом і затишком.</p>
+                
+                <!-- Талісман бренду (вимога методички) -->
+                <div class="mascot-box">
+                    <span class="mascot-icon">🐾</span>
+                    <div>
+                        <h4>Наш талісман — Кіт Полтавчик</h4>
+                        <p>Наш пухнастий помічник завжди стежить за тим, щоб глина була м'якою, а атмосфера в майстерні — максимально затишною!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=700&q=80" alt="Майстерня кераміки в Полтаві">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Розділ "Доставка й оплата" -->
+    <section id="delivery" class="delivery-section">
+        <div class="container">
+            <h2 class="section-title">Доставка та випал посуду</h2>
+            <p class="section-subtitle">Як ви отримуєте свої готові керамічні та фарфорові вироби</p>
+            
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <div class="delivery-icon">🔥</div>
+                    <h3>1. Сушіння та випал</h3>
+                    <p>Після майстер-класу ваші вироби сушаться та проходять 2 етапи випалу при температурі 1200°C (триває 10–14 днів).</p>
+                </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon">🏢</div>
+                    <h3>2. Самовивіз у Полтаві</h3>
+                    <p>Ви можете безкоштовно забрати готовий посуд прямо з нашої майстерні в центрі Полтави в зручний час.</p>
+                </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon">📦</div>
+                    <h3>3. Доставка по Україні</h3>
+                    <p>Для гостей міста надсилаємо дбайливо запакований посуд Новою Поштою або Укрпоштою по всій Україні.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- 3. Розділ "Контакти" -->
+    <section id="contacts" class="contacts-section">
+        <div class="container contacts-grid">
+            <div class="contacts-info">
+                <h2>Завітайте до нас у гості</h2>
+                <p>Чекаємо вас на майстер-класи та теплі розмови за чашкою чаю!</p>
+                
+                <ul class="contact-details">
+                    <li>📍 <strong>Адреса:</strong> м. Полтава, вул. Соборності, 24</li>
+                    <li>📞 <strong>Телефон:</strong> +380 (97)301-64-14 </li>
+                    <li>✉️ <strong>Email:</strong> info@terra-poltava.ua</li>
+                    <li>🕒 <strong>Графік:</strong> Вт-Нд: 10:00 – 19:00 (Пн — вихідний)</li>
+                </ul>
+
+                <!-- Ось тут вставляється блок з посиланням на Instagram -->
+                <div class="socials">
+                    <h4>Ми в соцмережах:</h4>
+                    <a href="https://www.instagram.com/mustafa.o32?xtok=enFld3JqZGhvZGc3" target="_blank" rel="noopener noreferrer">Instagram 📸</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Telegram</a>
+                </div>
+            </div>
+
+            <!-- Затишна фотографія майстерні замість карти -->
+            <div class="contacts-image-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDNkOzgBMkuS6hgb7OB0tVQJNkP7RZML_Io1xnmlvLJA&s=10" alt="Наша керамічна майстерня в Полтаві">
+            </div>
+        </div>
+    </section>
+	<!-- Форма реєстрації / замовлення курсу (вимога методички) -->
+    <section id="order" class="order-section">
+        <div class="container order-container">
+            <h2>Записатися на курс</h2>
+            <p>Заповніть коротку форму, і ми зв'яжемося з вами для підтвердження деталей та зручного часу.</p>
+            
+            <form class="order-form">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="tel" placeholder="Номер телефону" required>
+                <select required>
+                    <option value="" disabled selected>Оберіть курс або майстер-клас</option>
+                    <option>Основи гончарства</option>
+                    <option>Ручна ліпка посуду</option>
+                    <option>Вази та інтер'єрні глечики</option>
+                    <option>Витончені фарфорові чашки</option>
+                    <option>Підглазурний розпис фарфору</option>
+                    <option>Авторський кавовий сет</option>
+                    <option>Гончарне побачення для двох</option>
+                    <option>Магія ефектних глазурей</option>
+                </select>
+                <button type="submit" class="btn-submit">Підтвердити запис</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Підвал сайту -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Terra Poltava. Усі права захищено.</p>
+            <!-- Обов'язкова позначка з методички -->
+            <p class="study-note">Навчальний проєкт</p>
+        </div>
+    </footer>
+
+</body>
+</html>
